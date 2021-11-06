@@ -12,5 +12,14 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  return tutorials.map(function (tardis) {
+    const words = tardis.split(' ');
+    const newSentence = words.map(word => word[0].toUpperCase() + word.slice(1)).join(" ");
+    return newSentence;
+  });  
 }
+
+
+
+
+
